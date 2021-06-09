@@ -1,13 +1,12 @@
-let div = document.getElementById("div")
+let h2 = document.getElementById("h2")
 
-div.children[0].children[1].addEventListener("click", function(){
-    div.children[0].children[0].innerHTML = 'Número sorteado: ' + Math.round(Math.random() *1000)
-})
+function colocaMaiusculo(){
+    this.innerHTML = this.innerHTML.toUpperCase()
+}
 
-div.children[7].children[1].addEventListener("click", function(){
-    div.children[7].children[0].innerHTML = 'Número sorteado: ' + Math.round(Math.random() *100)
-})
+function colocaMinusculo(){
+    this.innerHTML = 'Filmes'
+}
 
-div.children[14].children[1].addEventListener("click", function(){
-    div.children[14].children[0].innerHTML = 'Número sorteado: ' + Math.round(Math.random() *10)
-})
+h2.onmouseover = colocaMaiusculo
+h2.onmouseout = colocaMinusculo
